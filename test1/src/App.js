@@ -1,22 +1,17 @@
+import React from "react";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Form from "./Form";
+import Thanku from "./Thanku";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Form />} />
+          <Route path="/thanku" element={<Thanku />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
-
-export default App;
